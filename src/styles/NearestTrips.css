@@ -4,10 +4,12 @@
 
 /* Nearest Trips Section */
 .nearest-trips {
+    height: 100%; 
+    width: 100vw;
     background: #fff;
     padding: 60px 10%;
     text-align: left;
-    margin-top: -100px;
+    margin-top: -130px;
 }
 
 .nearest-trips h2 {
@@ -181,6 +183,10 @@
     .prev-btn, .next-btn {
         font-size: 18px;
         padding: 10px 15px;
+    }
+
+    .nearest-trips {
+        margin-top: -50px;
     }
 
     .nearest-trips h2 {

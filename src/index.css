@@ -66,3 +66,121 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* ============================
+   🚀 Scroll-To-Top Button Styles
+============================ */
+
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #3f4752;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  
+  /* Ensuring Perfect Centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Pulse Effect */
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Ensures the arrow icon is perfectly centered */
+#scrollToTop i {
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Bounce Effect */
+#scrollToTop:hover {
+  background: #2c343e;
+  border-color: #d1d1d1;
+  transform: scale(1.15) translateY(-5px);
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Active (Click) Effect */
+#scrollToTop:active {
+  transform: scale(1);
+  background: #232a33;
+}
+
+/* Smooth Scale-In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Button Appears with Scale Effect */
+#scrollToTop.show {
+  display: flex;
+  animation: scaleIn 0.4s ease-in-out;
+}
+
+/* Subtle Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Bounce Animation on Hover */
+@keyframes bounce {
+  0% {
+    transform: scale(1.05) translateY(-2px);
+  }
+  50% {
+    transform: scale(1.1) translateY(-4px);
+  }
+  100% {
+    transform: scale(1.05) translateY(-2px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #scrollToTop {
+    width: 60px;
+    height: 60px;
+    bottom: 200px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #scrollToTop {
+    width: 60px;
+    height: 60px;
+    bottom: 200px;
+    right: 20px;
+  }
+}

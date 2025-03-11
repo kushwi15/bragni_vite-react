@@ -1,13 +1,12 @@
 /* =============================== 
             WELCOME PAGE 
 =============================== */
-
 /* Welcome Section */
 .welcome-section {
     background: #fff;
-    padding: 60px 10%;
-    text-align: left;
-    margin-top: -100px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* Main Container */
@@ -16,7 +15,7 @@
     align-items: center;
     width: 80%;
     gap: 50px;
-    margin-left: -5%;
+    margin-left: -10%;
     margin-top: 5%;
 }
 
@@ -25,23 +24,21 @@
     flex: 1;
     max-width: 50%;
     margin: 5%;
+    margin-top: -20%;
 }
 
 .text-content h2 {
+    margin-bottom: 10%;
     font-size: 32px;
     font-weight: bold;
-    color: #222;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: -25%;
+    color: #000;
 }
 
 .text-content p {
     font-size: 16px;
     color: #666;
     line-height: 1.6;
-    max-width: 400px;
+    max-width: 350px;
     margin-bottom: 25px;
     opacity: 0.9;
 }
@@ -50,18 +47,17 @@
 .book-now-btn {
     background: #004d47;
     color: #fff;
-    padding: 12px 22px;
+    padding: 12px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin-top: 50px;
+    transition: background 0.3s ease-in-out;    
+    margin-top: 10%;
 }
 
 .book-now-btn:hover {
     background: #003633;
-    transform: scale(1.05);
 }
 
 /* Right Side: Image Gallery */
@@ -70,7 +66,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: relative;
+    gap: 15px;
 }
 
 /* Large Image */
@@ -81,9 +77,9 @@
     object-fit: cover;
     margin-left: -100%;
     position: relative;
-    top: 0px; 
-    left: 70%;
+    top: -80px; /* Moved it higher */
 }
+
 
 /* Small Image (positioned slightly to the right) */
 .small-img img {
@@ -91,80 +87,74 @@
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
-    margin-right: -280px;
-    margin-top: -200px;
+    margin-right: -80px;
+    margin-top: -350px;
 }
 
-
-/* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .welcome-container {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
-        width: 90%;
+        width: 95%;
+        gap: 30px; /* Better spacing between elements */
+        margin: 0 auto;
+        margin-top: -15%;
+        padding: 0 5%;
     }
 
     .text-content {
-        max-width: 90%;
+        max-width: 100%;
+        margin-top: 0; /* Remove negative margin */
+        padding: 0 8%;
+    }
+
+    .text-content h2 {
+        font-size: 26px; /* Perfectly optimized size */
+        margin-bottom: 6%;
+        line-height: 1.4;
+    }
+
+    .text-content p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.6; /* Improved readability */
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .book-now-btn {
+        padding: 12px 22px;
+        font-size: 15px;
+        margin-top: 6%;
+        width: 80%; /* Centered button with better width */
     }
 
     .image-gallery {
         align-items: center;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
     }
 
     .large-img img {
-        width: 90%;
-        max-width: 280px;
+        width: 90%; /* Adjust width for perfect fit */
+        height: auto;
+        max-width: 280px; /* Prevents excessive stretching */
+        border-radius: 12px; /* Slightly larger border-radius */
+        object-fit: cover;
+        margin: 0 auto;
+        position: static; /* No unnecessary positioning */
     }
 
     .small-img img {
         width: 75%;
-        max-width: 200px;
-        position: relative;
-        bottom: 0;
-        right: 0;
-        margin-top: -20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .text-content h2 {
-        font-size: 28px;
-    }
-
-    .text-content p {
-        font-size: 15px;
-    }
-
-    .large-img img {
-        max-width: 260px;
-    }
-
-    .small-img img {
-        max-width: 180px;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-content h2 {
-        font-size: 24px;
-    }
-
-    .text-content p {
-        font-size: 14px;
-    }
-
-    .large-img img {
-        max-width: 240px;
-    }
-
-    .small-img img {
-        max-width: 160px;
-    }
-
-    .book-now-btn {
-        font-size: 14px;
-        padding: 10px 18px;
+        height: auto;
+        max-width: 220px;
+        border-radius: 12px;
+        object-fit: cover;
+        margin: 0 auto;
+        margin-top: -10px; /* Better placement */
     }
 }

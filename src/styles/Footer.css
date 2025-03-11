@@ -5,6 +5,8 @@
 footer {
     background-color: #111; /* Darker shade for a premium feel */
     color: #f1f1f1; /* Softer white for better contrast */
+    height: 100%; 
+    width: 100vw;
     text-align: center;
     padding: 25px 0;
     font-family: 'Poppins', sans-serif;
